@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.1.8](https://github.com/projek-xyz/version/compare/v0.1.7...v0.1.8) (2026-05-16)
+
+
+### Features
+
+* **main:** change default branch back to main ([dec86bd](https://github.com/projek-xyz/version/commit/dec86bd5caa20fde58209618803bad56a84a4ac6))
+* **main:** rename the workflow ([5be61fb](https://github.com/projek-xyz/version/commit/5be61fbfcdee7be44ad8cbada5d92c89d23dcc4c))
+
+
+### Bug Fixes
+
+* **main:** change the process to 1 minute ([875fea8](https://github.com/projek-xyz/version/commit/875fea8d9b5fc35378fbb1783b480f1ec5e66513))
+* **main:** wrong branch you stupid ([5f7f64c](https://github.com/projek-xyz/version/commit/5f7f64cac9a3432a9e1d64693839ba8f0cd9fa24))
+
 ## [0.1.7](https://github.com/projek-xyz/version/compare/v0.1.6...v0.1.7) (2026-05-16)
 
 
