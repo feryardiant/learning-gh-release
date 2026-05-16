@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.1.11](https://github.com/projek-xyz/version/compare/v0.1.10...v0.1.11) (2026-05-16)
+
+
+### Features
+
+* **release:** make use of `CI` workflow to download artifact ([ae0a548](https://github.com/projek-xyz/version/commit/ae0a548c12c4c877c472bbfdc8a00329ff006602))
+
 ## [0.1.10](https://github.com/projek-xyz/version/compare/v0.1.9...v0.1.10) (2026-05-16)
 
 ## [0.1.9](https://github.com/projek-xyz/version/compare/v0.1.8...v0.1.9) (2026-05-16)
