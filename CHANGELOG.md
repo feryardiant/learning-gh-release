@@ -1,6 +1,14 @@
 # Changelog
 
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
+
+## [0.1.7](https://github.com/projek-xyz/version/compare/v0.1.6...v0.1.7) (2026-05-16)
+
+
+### Features
+
+* **main:** emulate a long running process ([4f018e8](https://github.com/projek-xyz/version/commit/4f018e847b968e802e6c1e027dc4ec0b35e27c91))
+* **release:** make use of release workflow from projek-xyz ([3e9a217](https://github.com/projek-xyz/version/commit/3e9a21786eb3553a13d46b118ebe534ae36830fe))
 
 ### [0.1.6](https://github.com/projek-xyz/version/compare/v0.1.5...v0.1.6) (2020-06-16)
 
