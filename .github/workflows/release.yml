@@ -9,6 +9,8 @@ jobs:
   xyz-publish:
     name: Publish
     uses: projek-xyz/actions/.github/workflows/release.yml@release-artifacts
+    with:
+      workflow_name: CI
 
     permissions:
       contents: write
