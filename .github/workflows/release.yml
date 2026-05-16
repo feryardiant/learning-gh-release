@@ -6,8 +6,16 @@ on:
       - 'v*.*.*'
 
 jobs:
-  publish:
+  xyz-publish:
+    name: Publish
+    uses: projek-xyz/actions/.github/workflows/release.yml@release-artifacts
+
+    permissions:
+      contents: write
+
+  self-publish:
     name: Publish binaries
+    if: false
     runs-on: ubuntu-latest
 
     steps:
@@ -20,7 +28,7 @@ jobs:
         echo 'first' > releases/first.txt
         echo 'second' > releases/second.txt
         npx @feryardiant/read-changelog > PUBLISH.txt
-    
+
     - name: Upload binaries to release
       uses: softprops/action-gh-release@v1
       env:
