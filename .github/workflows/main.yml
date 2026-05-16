@@ -1,11 +1,11 @@
-name: Main
+name: CI
 
 on:
   push:
     branches: [main]
 
 jobs:
-  proc:
+  build:
     name: A long process
     runs-on: ubuntu-latest
 
