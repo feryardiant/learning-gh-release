@@ -1,0 +1,24 @@
+name: Main
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  proc:
+    name: A long process
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: A 5 minutes process
+        run: |
+          sleep 5m
+          mkdir releases
+          echo 'first' > releases/first.txt
+          echo 'second' > releases/second.txt
+
+      - uses: actions/upload-artifact@v7
+        with:
+          name: release-archives
+          overwrite: true
+          path: releases/*.txt
