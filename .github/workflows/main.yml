@@ -14,9 +14,9 @@ jobs:
         run: |
           sleep 30s
           mkdir releases
-          echo 'first' > releases/first.txt
-          echo 'second' > releases/second.txt
-          echo 'third' > releases/third.txt
+          echo 'first updated' > releases/first.txt
+          echo 'second updated' > releases/second.txt
+          echo 'third updated' > releases/third.txt
 
       - uses: actions/upload-artifact@v7
         with:
