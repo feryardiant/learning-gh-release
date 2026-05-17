@@ -8,6 +8,8 @@ jobs:
   build:
     name: A long process
     runs-on: ubuntu-latest
+    outputs:
+      should-upload: ${{ steps.dist-archive.outputs.should-upload }}
 
     steps:
       - name: A 30 seconds build
