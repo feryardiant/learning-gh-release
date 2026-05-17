@@ -17,7 +17,6 @@ jobs:
           echo 'first' > releases/first.txt
           echo 'second' > releases/second.txt
           echo 'third' > releases/third.txt
-          echo 'forth' > releases/forth.txt
 
       - uses: actions/upload-artifact@v7
         with:
