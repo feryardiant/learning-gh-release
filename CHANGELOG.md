@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.1.19](https://github.com/projek-xyz/version/compare/v0.1.18...v0.1.19) (2026-05-17)
+
+
+### Bug Fixes
+
+* fix workflow tag ([3ee3f78](https://github.com/projek-xyz/version/commit/3ee3f78f5464afe79f5cf338341ab956785a3447))
+
 ## [0.1.18](https://github.com/projek-xyz/version/compare/v0.1.17...v0.1.18) (2026-05-17)
 
 ## [0.1.17](https://github.com/projek-xyz/version/compare/v0.1.16...v0.1.17) (2026-05-17)
