@@ -10,6 +10,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
       - name: A 30 seconds process
         run: |
           sleep 30s
@@ -23,3 +26,7 @@ jobs:
           name: release-archives
           overwrite: true
           path: releases/*.txt
+
+      - name: Logging
+        run: |
+          echo "${{ toJSON(github.event) }}"
