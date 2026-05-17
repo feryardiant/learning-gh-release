@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.1.15](https://github.com/projek-xyz/version/compare/v0.1.14...v0.1.15) (2026-05-17)
+
+
+### Features
+
+* ability to update released assets from main workflow ([dac9381](https://github.com/projek-xyz/version/commit/dac9381887c47434988abdf8c8192a9d48bbd033))
+* log `github.event` obj ([41e807c](https://github.com/projek-xyz/version/commit/41e807cac68b99cd1539cc954e5c83f676b6da78))
+* print latest commit message title ([aa102ef](https://github.com/projek-xyz/version/commit/aa102efa70974b1d233a18e508143d4118ca24da))
+
 ## [0.1.14](https://github.com/projek-xyz/version/compare/v0.1.13...v0.1.14) (2026-05-17)
 
 
