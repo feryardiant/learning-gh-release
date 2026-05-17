@@ -35,7 +35,7 @@ jobs:
           path: releases
 
   update-assets:
-    name: Update release assets
+    name: Update assets
     needs: build
     if: |-
       needs.build.outputs.should-upload == '1' &&

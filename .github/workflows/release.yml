@@ -6,7 +6,7 @@ on:
       - 'v*.*.*'
 
 jobs:
-  xyz-publish:
+  publish:
     name: Publish
     uses: projek-xyz/actions/.github/workflows/release.yml@release-assets
 
@@ -15,7 +15,7 @@ jobs:
 
   update-assets:
     name: Upload assets
-    needs: xyz-publish
+    needs: publish
     uses: projek-xyz/actions/.github/workflows/uploads.yml@release-assets
     with:
       workflow_name: CI
@@ -23,7 +23,7 @@ jobs:
     permissions:
       contents: write
 
-  self-publish:
+  old-publish:
     name: Publish binaries
     if: false
     runs-on: ubuntu-latest
