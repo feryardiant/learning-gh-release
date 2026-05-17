@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.2.9](https://github.com/projek-xyz/version/compare/v0.2.8...v0.2.9) (2026-05-17)
+
+
+### Features
+
+* sync with projek-xyz/actions[#26](https://github.com/projek-xyz/version/issues/26) ([77c0733](https://github.com/projek-xyz/version/commit/77c0733f51977091bfa07e216fcef8b4934e8229))
+
 ## [0.2.8](https://github.com/projek-xyz/version/compare/v0.2.7...v0.2.8) (2026-05-17)
 
 
