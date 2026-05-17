@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.2.1](https://github.com/projek-xyz/version/compare/v0.2.0...v0.2.1) (2026-05-17)
+
+
+### Bug Fixes
+
+* last check for a releases ([b57f5f4](https://github.com/projek-xyz/version/commit/b57f5f4c02121e42f6038da013cabccdeee6b6a8))
+
 ## [0.2.0](https://github.com/projek-xyz/version/compare/v0.1.19...v0.2.0) (2026-05-17)
 
 
