@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.2.5](https://github.com/projek-xyz/version/compare/v0.2.4...v0.2.5) (2026-05-17)
+
+
+### Bug Fixes
+
+* rename `release-assets` to `uploads` workflow ([b0bd277](https://github.com/projek-xyz/version/commit/b0bd277b39ee8a8c7d90e6b7acd242067e0500e7))
+
 ## [0.2.4](https://github.com/projek-xyz/version/compare/v0.2.3...v0.2.4) (2026-05-17)
 
 
