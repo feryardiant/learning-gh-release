@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.1.16](https://github.com/projek-xyz/version/compare/v0.1.15...v0.1.16) (2026-05-17)
+
+
+### Features
+
+* new build ([2f68e03](https://github.com/projek-xyz/version/commit/2f68e03e04410e57b74450feb4953b2f68215a7c))
+* updated build ([6779b04](https://github.com/projek-xyz/version/commit/6779b04e0485941be0853632f5a69698372e37d5))
+
+
+### Bug Fixes
+
+* make `update-releases` depends on `build` ([f5721ba](https://github.com/projek-xyz/version/commit/f5721badc1b3d5517b17620a788b8e999775f221))
+* move update asset to separated job ([169b8a2](https://github.com/projek-xyz/version/commit/169b8a2b77a80582720a6779343f3821ed570e5c))
+
 ## [0.1.15](https://github.com/projek-xyz/version/compare/v0.1.14...v0.1.15) (2026-05-17)
 
 
