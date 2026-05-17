@@ -52,13 +52,12 @@ jobs:
           RELEASE_VERSION=$(echo "$LATEST_COMMIT" | head -n 1 | sed 's/chore(release): /v/')
 
           echo "Release version: $RELEASE_VERSION"
-          gh release view "$RELEASE_VERSION"
 
-          # for _ in {1..10}; do
-          #   echo "Checking for release $RELEASE_VERSION to be available..."
-          #   gh release view "$RELEASE_VERSION" >/dev/null 2>&1 && break
-          #   sleep 5s
-          # done
+          for _ in {1..10}; do
+            echo "Checking for release $RELEASE_VERSION to be available..."
+            gh release view "$RELEASE_VERSION" >/dev/null 2>&1 && break
+            sleep 5s
+          done
 
           # gh release view "$RELEASE_VERSION" >/dev/null 2>&1 || {
           #   echo "Release $RELEASE_VERSION is not available yet"
