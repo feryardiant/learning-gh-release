@@ -28,5 +28,7 @@ jobs:
           path: releases/*.txt
 
       - name: Logging
+        env:
+          LATEST_COMMIT: ${{ github.event.head_commit.message }}
         run: |
-          echo "${{ toJSON(github.event) }}"
+          echo "$LATEST_COMMIT" | head -n 1
