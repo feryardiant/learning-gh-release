@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.2.6](https://github.com/projek-xyz/version/compare/v0.2.5...v0.2.6) (2026-05-17)
+
+
+### Bug Fixes
+
+* ensure upload asset conditions ([1c21fc5](https://github.com/projek-xyz/version/commit/1c21fc5c5f1db1762ce878ad44e4d9d0e8c8e3bb))
+
 ## [0.2.5](https://github.com/projek-xyz/version/compare/v0.2.4...v0.2.5) (2026-05-17)
 
 
