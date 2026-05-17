@@ -26,6 +26,7 @@ jobs:
 
   update-releases:
     name: Update release assets
+    needs: build
     if: |-
       github.event_name == 'push' &&
       startsWith(github.event.head_commit.message, 'chore(release):')
