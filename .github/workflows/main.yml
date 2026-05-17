@@ -45,6 +45,7 @@ jobs:
           path: releases
 
       - name: Update release assets
+        shell: bash
         env:
           GITHUB_TOKEN: ${{ github.token }}
           LATEST_COMMIT: ${{ github.event.head_commit.message }}
