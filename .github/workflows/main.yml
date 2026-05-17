@@ -10,9 +10,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: A 1 minutes process
+      - name: A 30 seconds process
         run: |
-          sleep 1m
+          sleep 30s
           mkdir releases
           echo 'first' > releases/first.txt
           echo 'second' > releases/second.txt
