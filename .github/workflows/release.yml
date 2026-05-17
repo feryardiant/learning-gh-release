@@ -8,7 +8,18 @@ on:
 jobs:
   xyz-publish:
     name: Publish
-    uses: projek-xyz/actions/.github/workflows/release.yml@main
+    uses: projek-xyz/actions/.github/workflows/release.yml@release-assets
+
+    permissions:
+      contents: write
+
+  update-assets:
+    name: Upload assets
+    needs: xyz-publish
+    if: |-
+      needs.xyz-publish.outputs.should-upload == '1' &&
+      startsWith(github.event.head_commit.message, 'chore(release):')
+    uses: projek-xyz/actions/.github/workflows/release-assets.yml@release-assets
     with:
       workflow_name: CI
 

@@ -10,69 +10,74 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: A 30 seconds process
+      - name: A 30 seconds build
         run: |
           sleep 30s
+
+      - name: Simulating build ouputs
+        id: dist-archive
+        if: github.event_name == 'push' && github.ref_name == 'main'
+        run: |
           mkdir releases
           echo 'another first' > releases/first.txt
           echo 'another second' > releases/second.txt
           echo 'another third' > releases/third.txt
 
+          echo "should-upload=1" >> $GITHUB_OUTPUT
+
       - uses: actions/upload-artifact@v7
+        if: steps.dist-archive.outputs.should-upload == '1'
         with:
           name: release-archives
           overwrite: true
-          path: releases/*.txt
+          path: releases
 
-  update-releases:
+  update-assets:
     name: Update release assets
     needs: build
     if: |-
-      github.event_name == 'push' &&
+      needs.build.outputs.should-upload == '1' &&
       startsWith(github.event.head_commit.message, 'chore(release):')
-    runs-on: ubuntu-latest
+    uses: projek-xyz/actions/.github/workflows/release-assets.yml@release-assets
+    with:
+      workflow_name: ${{ github.workflow }}
 
     permissions:
       contents: write
 
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v6
+    # steps:
+    #   - name: Checkout
+    #     uses: actions/checkout@v6
 
-      - uses: actions/download-artifact@v8
-        with:
-          name: release-archives
-          path: releases
+    #   - uses: actions/download-artifact@v8
+    #     with:
+    #       name: release-archives
+    #       path: releases
 
-      - name: Update release assets
-        shell: bash
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
-          LATEST_COMMIT: ${{ github.event.head_commit.message }}
-        run: |
-          RELEASE_VERSION=$(echo "$LATEST_COMMIT" | head -n 1 | sed 's/chore(release): /v/')
+    #   - name: Update release assets
+    #     shell: bash
+    #     env:
+    #       GITHUB_TOKEN: ${{ github.token }}
+    #       LATEST_COMMIT: ${{ github.event.head_commit.message }}
+    #     run: |
+    #       RELEASE_VERSION=$(echo "$LATEST_COMMIT" | head -n 1 | sed 's/chore(release): /v/')
 
-          echo "Release version: $RELEASE_VERSION"
+    #       echo "Release version: $RELEASE_VERSION"
 
-          for _ in {1..10}; do
-            echo "Checking for release $RELEASE_VERSION to be available..."
-            if gh release view "$RELEASE_VERSION" >/dev/null 2>&1; then
-              echo "Release $RELEASE_VERSION found!"
-              break
-            fi
-            sleep 5s
-          done
+    #       for _ in {1..10}; do
+    #         echo "Checking for release $RELEASE_VERSION to be available..."
+    #         if gh release view "$RELEASE_VERSION" >/dev/null 2>&1; then
+    #           echo "Release $RELEASE_VERSION found!"
+    #           break
+    #         fi
+    #         sleep 5s
+    #       done
 
-          gh release view "$RELEASE_VERSION" >/dev/null 2>&1 || {
-            echo "Release $RELEASE_VERSION is not available yet"
-            exit 0
-          }
+    #       shopt -s nullglob
 
-          shopt -s nullglob
+    #       for to_upload in releases/*.txt; do
+    #         [[ -z "$to_upload" || ! -f "$to_upload" ]] && continue
 
-          for to_upload in releases/*.txt; do
-            [[ -z "$to_upload" || ! -f "$to_upload" ]] && continue
-
-            echo "Uploading $to_upload..."
-            gh release upload "$RELEASE_VERSION" "${to_upload}" --clobber
-          done
+    #         echo "Uploading $to_upload..."
+    #         gh release upload "$RELEASE_VERSION" "${to_upload}" --clobber
+    #       done
