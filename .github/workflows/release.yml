@@ -8,7 +8,7 @@ on:
 jobs:
   publish:
     name: Publish
-    uses: projek-xyz/actions/.github/workflows/release.yml@release-assets
+    uses: projek-xyz/actions/.github/workflows/release.yml@main
 
     permissions:
       contents: write
@@ -16,7 +16,7 @@ jobs:
   update-assets:
     name: Upload assets
     needs: publish
-    uses: projek-xyz/actions/.github/workflows/uploads.yml@release-assets
+    uses: projek-xyz/actions/.github/workflows/uploads.yml@main
     with:
       workflow_name: CI
 

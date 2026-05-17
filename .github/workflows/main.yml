@@ -40,7 +40,7 @@ jobs:
     if: |-
       needs.build.outputs.should-upload == '1' &&
       startsWith(github.event.head_commit.message, 'chore(release):')
-    uses: projek-xyz/actions/.github/workflows/uploads.yml@release-assets
+    uses: projek-xyz/actions/.github/workflows/uploads.yml@main
     with:
       workflow_name: ${{ github.workflow }}
 
