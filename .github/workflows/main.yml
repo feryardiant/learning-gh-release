@@ -27,8 +27,17 @@ jobs:
           overwrite: true
           path: releases/*.txt
 
-      - name: Logging
+      - name: Update release assets
+        if: |-
+          github.event_name == 'push' &&
+          startsWith(github.event.head_commit.message, 'chore(release):')
         env:
           LATEST_COMMIT: ${{ github.event.head_commit.message }}
         run: |
-          echo "$LATEST_COMMIT" | head -n 1
+          RELEASE_VERSION=$(echo "$LATEST_COMMIT" | head -n 1 | sed 's/chore(release): /v/')
+
+          shopt -s nullglob
+
+          for to_upload in releases/*.txt; do
+            gh release upload "$RELEASE_VERSION" "${to_upload}" --clobber
+          done
