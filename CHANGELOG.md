@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.1.12](https://github.com/projek-xyz/version/compare/v0.1.11...v0.1.12) (2026-05-17)
+
+
+### Features
+
+* **main:** build the third file ([4775caa](https://github.com/projek-xyz/version/commit/4775caaefcb206c2f0a9e3066d4564701d2c0ea5))
+
 ## [0.1.11](https://github.com/projek-xyz/version/compare/v0.1.10...v0.1.11) (2026-05-16)
 
 
