@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.1.17](https://github.com/projek-xyz/version/compare/v0.1.16...v0.1.17) (2026-05-17)
+
+
+### Features
+
+* another build ([a9d23e4](https://github.com/projek-xyz/version/commit/a9d23e4da9afb3247e660a4d88157dbec940f355))
+* another build again ([3e87a3d](https://github.com/projek-xyz/version/commit/3e87a3d341d27ee7d796c6a4a677559399b22041))
+
+
+### Bug Fixes
+
+* forgot to download the artifacts ([68473a5](https://github.com/projek-xyz/version/commit/68473a5b68920e67b9be849425b673e2c3769147))
+
 ## [0.1.16](https://github.com/projek-xyz/version/compare/v0.1.15...v0.1.16) (2026-05-17)
 
 
