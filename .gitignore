@@ -2,14 +2,46 @@
 # --------------------------
 Thumbs.db
 Desktop.ini
+.DS_Store
 .directory
-*.cache
+._*
+*.DS_Store
 *.old
 *.log
 *.tmp
-*.zip
-._
+
+# caches
+.cache
+*.cache
 *~
+
+# distribution
+dist
+*.zip
+
+# Development files
+# --------------------------
+.env.*
+.env
+.php-version
+.tool-versions
+node_modules
+vendor
+
+# Other package managers
+bun.lock
+bun.lockb
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# AI Agents
+# --------------------------
+.agents
+.antigravitycli
+.gemini
+conductor
+GEMINI.md
 
 # IDE Project Configurations
 # --------------------------
@@ -18,18 +50,11 @@ nbproject
 .settings
 .vscode
 .project
+.zed
 *.sublime-*
-
-# Developments
-# --------------------------
-node_modules
-vendor
-.php-version
-clover.xml
-lcov.info
-_ide_helper.php
-_book
 
 # But Keep these
 # --------------------------
+!.env.example
+!.env.*.example
 !.gitkeep
